@@ -223,7 +223,7 @@ async function loadTotalCount() {
 
 // Cargar metadatos completos (solo ~260 KB) y miniaturas representativas por categoría
 async function loadAllMetadataAndCategories() {
-    const projectId = window.firebaseConfig?.projectId || 'objetos-perdidos-itt';
+    const projectId = window.firebaseConfig?.projectId || 'objetos-perdidos-itt-otay';
     const project = `projects/${projectId}/databases/(default)/documents`;
     const runQueryUrl = `https://firestore.googleapis.com/v1/${project}:runQuery`;
     
@@ -336,7 +336,7 @@ async function fetchMissingImages(ids, onImageLoaded) {
     if (uniqueIds.length === 0) return;
     
     try {
-        const projectId = window.firebaseConfig?.projectId || 'objetos-perdidos-itt';
+        const projectId = window.firebaseConfig?.projectId || 'objetos-perdidos-itt-otay';
         const project = `projects/${projectId}/databases/(default)/documents`;
         
         // Bloques de 10 objetos para que se muestren inmediatamente de arriba hacia abajo
